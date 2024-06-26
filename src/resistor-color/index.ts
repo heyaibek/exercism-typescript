@@ -1,10 +1,5 @@
 export const colorCode = (color: string): number => {
-  for (let i = 0; i < COLORS.length; i++) {
-    if (COLORS[i] === color) {
-      return i;
-    }
-  }
-  throw new Error(`given color "${color} doesn't exist"`);
+  return COLORS.findIndex(c => c === color);
 };
 
 export const COLORS = [
